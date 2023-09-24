@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Traffic</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <div class="buttons">
+    <h1>Traffic Light Controller</h1>
+
+    <p id="redStatus">RED LED STATUS</p>
+    <button id="red" onclick="toggLedRED()">RED</button>
+
+    <p id="greenStatus">GREEN LED STATUS</p>
+    <button id="green" onclick="toggLedGREEN()">GREEN</button>
+
+    <p id="blueStatus">BLUE LED STATUS</p>
+    <button id="blue" onclick="toggLedBLUE()">BLUE</button>
+  </div>
+
+  <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.0.1/firebase-database-compat.js"></script>
+  <script src="script.js"></script>
+</body>
+
+</html>
