@@ -58,11 +58,17 @@ function setLedStatus() {
   });
 }
 
+const redStatusElement = document.getElementById('redStatus');
+const greenStatusElement = document.getElementById('greenStatus');
+const blueStatusElement = document.getElementById('blueStatus');
+
 // Function to toggle RED LED status
 function toggLedRED() {
-  const redStatusElement = document.getElementById('redStatus');
+
   if (redStatusElement.textContent === 'RED OFF') {
     redStatusElement.textContent = 'RED ON';
+    greenStatusElement.textContent = 'GREEN OFF';
+    blueStatusElement.textContent = 'BLUE OFF';
   } else {
     redStatusElement.textContent = 'RED OFF';
   }
@@ -72,9 +78,10 @@ function toggLedRED() {
 
 // Function to toggle GREEN LED status
 function toggLedGREEN() {
-  const greenStatusElement = document.getElementById('greenStatus');
   if (greenStatusElement.textContent === 'GREEN OFF') {
     greenStatusElement.textContent = 'GREEN ON';
+    redStatusElement.textContent = 'RED OFF';
+    blueStatusElement.textContent = 'BLUE OFF';
   } else {
     greenStatusElement.textContent = 'GREEN OFF';
   }
@@ -84,9 +91,10 @@ function toggLedGREEN() {
 
 // Function to toggle BLUE LED status
 function toggLedBLUE() {
-  const blueStatusElement = document.getElementById('blueStatus');
   if (blueStatusElement.textContent === 'BLUE OFF') {
     blueStatusElement.textContent = 'BLUE ON';
+    redStatusElement.textContent = 'RED OFF';
+    greenStatusElement.textContent = 'GREEN OFF';
   } else {
     blueStatusElement.textContent = 'BLUE OFF';
   }
